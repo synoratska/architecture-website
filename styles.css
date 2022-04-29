@@ -185,6 +185,7 @@ html {
   right: -40rem;
   background-color: #fff;
   transition: right 0.5s;
+  z-index: 40;
 }
 
 .change .sidebar {
@@ -335,7 +336,7 @@ html {
 }
 
 .service-header h3 {
-  font-family: 'Baloo Da 2', serif;
+  font-family: "Baloo Da 2", serif;
   font-size: 2.6rem;
   line-height: 2.6rem;
   font-weight: 400;
@@ -343,7 +344,7 @@ html {
 }
 
 .service-text {
-  font-family: 'Josefin Slab', serif;
+  font-family: "Josefin Slab", serif;
   font-size: 1.6rem;
   text-align: justify;
 }
@@ -379,7 +380,7 @@ html {
   width: 37rem;
   height: 45rem;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: relative;
 }
 
@@ -395,20 +396,19 @@ html {
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   transition: opacity 0.3s;
 }
 
-
 .card:hover .card-img-wrapper {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .card-info {
   position: absolute;
   bottom: 0;
   padding: 2rem;
-  text-shadow: .2rem .2rem rgba(0, 0, 0, 0.4);
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
@@ -422,7 +422,7 @@ html {
 }
 
 .card-info h2 {
-  font-family: 'Baloo Da 2', serif;
+  font-family: "Baloo Da 2", serif;
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 300;
@@ -430,7 +430,7 @@ html {
 }
 
 .card-info h3 {
-  font-family: 'Mulish', serif;
+  font-family: "Mulish", serif;
   font-size: 2rem;
   font-weight: 500;
   color: #262654;
@@ -438,7 +438,7 @@ html {
 }
 
 .card-info p {
-  font-family: 'Baloo Da 2', serif;
+  font-family: "Baloo Da 2", serif;
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.6rem;
@@ -452,10 +452,125 @@ html {
   height: 3rem;
   background-color: #c6b72b;
   border: none;
-  font-family: 'Baloo Da 2', serif;
+  font-family: "Baloo Da 2", serif;
   line-height: 1.5rem;
   color: #eee;
-  border-radius: .3rem;
-  box-shadow: .1rem 18rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.3rem;
+  box-shadow: 0.1rem 18rem rgba(0, 0, 0, 0.4);
+}
 
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-wrapper {
+  width: 60%;
+  height: 75rem;
+  display: flex;
+
+  box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
+}
+
+.contact-left {
+  width: 35%;
+  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+    url(images/contact-bg.jpg) center no-repeat ;
+  background-size: cover;
+}
+
+.contact-right {
+  width: 65%;
+  background-color: #eee;
+  padding: 3rem 10rem 10rem 10rem;
+}
+
+.contact-heading {
+  font-family: 'Baloo Da 2', serif;
+  font-size: 6rem;
+  font-weight: 300;
+  color: #272727;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.contact-right form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  width: 45rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: .2rem dashed #636363;
+  margin: 3rem 0;
+  padding: 1rem 1rem 1rem 0;
+  font-family: 'Mulish', serif;
+  font-style: 1.6rem;
+  color: #4b4b4b;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  height: 4rem;
+}
+
+.input-group textarea {
+  max-height: 7rem;
+  max-width: 45rem;
+}
+
+.field:focus {
+  border-bottom-style: solid;
+}
+
+.input-group label {
+  position: absolute;
+  left:0;
+  font-family: 'Baloo Da 2', serif;
+  font-size: 1.8rem;
+  color: #4b4b4b;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.input-label {
+  bottom: 3rem;
+}
+
+.message {
+  bottom: 6rem;
+}
+
+.field:focus ~ label {
+  transform: translateY(-3rem);
+  font-size: 1.2rem;
+}
+
+.submit-btn {
+  width: 45rem;
+  height: 5rem;
+  background-color: #c6b72b;
+  color: #fff;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-family: 'Mulish', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.3);
 }
